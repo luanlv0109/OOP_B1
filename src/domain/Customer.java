@@ -38,7 +38,7 @@ public class Customer {
         this.phone = phone;
     }
 
-    public String getEmail() {
+    public String getRunEmail() {
         return "gửi mail";
     }
 }
