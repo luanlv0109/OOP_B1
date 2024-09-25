@@ -2,7 +2,7 @@ package service;
 
 import java.util.Properties;
 
-public class EmailService {
+public class EmailService implements MessageService {
     private NotificationStrategy notificationStrategy;
 
     public EmailService(NotificationStrategy notificationStrategy) {
