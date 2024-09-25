@@ -6,10 +6,6 @@ import java.util.List;
 public class Cart {
     private List<Book> books;
 
-    public Cart() {
-        this.books = new ArrayList<>();
-    }
-
     public void addBook(Book book) {
         books.add(book);
     }
@@ -19,15 +15,10 @@ public class Cart {
     }
 
     public double getTotalPrice() {
-        double total = 0;
-        for (Book book : books) {
-            total += book.getPrice();
-        }
-        return total;
+        return books.stream().mapToDouble(Book::getPrice).sum();
     }
 
-    public void checkout(Customer customer) {
-        System.out.println("Checkout successful for " + customer.getName());
+    public List<Book> getBooks() {
+        return books;
     }
-
 }

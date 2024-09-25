@@ -1,6 +1,8 @@
 import domain.Book;
 import domain.Cart;
 import domain.Customer;
+import service.CheckoutService;
+import service.mailServer.ConsoleNotificationStrategy;
 import service.EmailService;
 
 
@@ -15,7 +17,9 @@ public class Main {
         cart.addBook(book1);
         cart.addBook(book2);
 
-        cart.checkout(customer);
-        EmailService.sendOrderConfirmation(customer.getRunEmail(), customer.getName(), "Order details go here.");
+        EmailService emailService = new EmailService(new ConsoleNotificationStrategy());
+        CheckoutService checkoutService = new CheckoutService(emailService);
+
+        checkoutService.checkout(customer , cart );
     }
 }
