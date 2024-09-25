@@ -1,0 +1,5 @@
+- S: N/A
+- O: Nếu coi hàm main là một chương trình chạy thật, ta có thể triển khai các class util để tạo ra các hàm khởi tạo giá trị bạn đầu, tránh việc phải động vào code main
+- L: N/A
+- I: N/A
+- D: ta có thể triển khai interface MessageService và class EmailService có thể implement nó. Phục vụ việc đổi dịch vụ khác mà không phải mail sau này (vi du như SMS).

@@ -5,9 +5,9 @@ import domain.Customer;
 
 public class CheckoutService {
 
-    private EmailService emailService;
+    private MessageService emailService;
 
-    public CheckoutService(EmailService emailService) {
+    public CheckoutService(MessageService emailService) {
         this.emailService = emailService;
     }
     public void checkout(Customer customer, Cart cart) {
